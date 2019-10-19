@@ -6,5 +6,8 @@
 ## BASH
 
 `str="123";patt="^[0-9]*$"; if [[ $str =~ $patt ]]; then echo "matches"; fi`
-: bash regex ( does not work in POSIX-shell)
+: requires [[ ]] and is not POSIX-shell compatible
 
+
+`if [[ "123" =~ ^[0-9]*$ ]]; then echo "matches"; fi`
+: no quotes around pattern
