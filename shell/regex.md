@@ -11,3 +11,6 @@
 
 `if [[ "123" =~ ^[0-9]*$ ]]; then echo "matches"; fi`
 : no quotes around pattern
+
+`[[ "hallo welt" =~ ^(.[a-z]*) ]] && echo ${BASH_REMATCH[1]}`
+: the groups get exported to the BASH_REMATCH array
