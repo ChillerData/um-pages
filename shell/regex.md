@@ -3,6 +3,9 @@
 {:data-date="October 19, 2019"}
 {:data-extra="Um Pages"}
 
+## INFO
+bash uses POSIX ERE regex standard
+
 ## BASH
 
 `str="123";patt="^[0-9]*$"; if [[ $str =~ $patt ]]; then echo "matches"; fi`
