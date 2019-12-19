@@ -11,3 +11,15 @@
 `echo "Error: git is not installed." >&2`
 : redirect output to &2 which is std error
 
+## EXTRACT FILES
+`tar xvzf file.tar.gz`
+: x=extract v=verbose z=uncompress(gzip) f=filename
+
+`gunzip file.gz`
+: easy
+
+`unrar e foo.rar`
+: probably install unrar first
+
+`unzip bar.zip`
+: easy
