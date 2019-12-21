@@ -7,9 +7,12 @@
 `if [ -x "$(command -v git)" ]; then`
 : executes the happy path if git is found in path
 
-## ECHO TO STDERR
+## STDERR
 `echo "Error: git is not installed." >&2`
 : redirect output to &2 which is std error
+
+`make 2>&1 | grep foo`
+: redirect stderr to stdout to search in compile errors
 
 ## EXTRACT FILES
 `tar xvzf file.tar.gz`
