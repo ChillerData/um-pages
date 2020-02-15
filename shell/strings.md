@@ -34,3 +34,19 @@
 `"foo/bar/baz" -> "foo"`
 : remove suffix starting with first "/"
 
+## MULTI LINE VARIABLES
+
+`read -rd '' var << EOF`
+`foo`
+`bar`
+`EOF`
+: EOF can be any string but the latter has to be ^EOF$
+
+`scope() {`
+`   read -rd '' var <<- EOF`
+`   foo`
+`   bar`
+`   EOF`
+`}`
+: \- to allow indention but it has to be tabs no spaces ^\tEOF$
+
