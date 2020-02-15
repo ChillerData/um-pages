@@ -37,10 +37,16 @@
 ## MULTI LINE VARIABLES
 
 `read -rd '' var << EOF`
-`foo`
+`foo $replaced-var`
 `bar`
 `EOF`
 : EOF can be any string but the latter has to be ^EOF$
+
+`read -rd '' var << 'EOF'`
+`foo $ignored-var`
+`bar`
+`EOF`
+: quoting 'EOF' ignores dollar variables
 
 `scope() {`
 `   read -rd '' var <<- EOF`
