@@ -26,3 +26,7 @@
 
 `unzip bar.zip`
 : easy
+
+## SEE ALSO
+
+yy, regex, strings
